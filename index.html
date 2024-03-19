@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>WEBSITE</title>
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTable
+s.css">
+        
+    </head>
+    <body>
+        <script>
+            var html
+            $(document).ready(function(){
+                $.ajax({
+                    url:"https://networking-ecommerce-new.onrender.com/profile?id=1",
+                    success: function(data){
+                        html = data
+                        display_html()
+                    }
+                })
+            })
+            function display_html(){
+                $("body").append(html)
+                $(".col-lg-4").remove()
+                $(".col-lg-8").removeClass("col-lg-8").addClass("col-lg-12")
+
+
+
+            }
+        </script>
+    </body>
+</html>
